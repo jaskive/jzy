@@ -13,9 +13,7 @@
   </header>
 
   <main>
-    <div id="heart-container">
-      <div id="heart"></div>
-    </div>
+    <!-- Go Back button -->
     <button id="backButton">Go Back</button>
   </main>
 
@@ -23,6 +21,11 @@
     <p>&copy; 2024 Love & Joy</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // JavaScript to navigate to another page when the button is clicked
+    document.getElementById("backButton").addEventListener("click", function() {
+      window.location.href = "index.html";  // Change "index.html" to the URL or path of the page you want to go to
+    });
+  </script>
 </body>
 </html>
