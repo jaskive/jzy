@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♡xjm♡</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    button {
+      border-radius: 15px; /* Rounds the corners of the button */
+      padding: 10px 20px;   /* Adds padding for a better size */
+      font-size: 16px;      /* Adjusts the font size */
+      background-color: pink; /* Button background color */
+      color: white;         /* Text color */
+      border: none;         /* Removes border */
+      cursor: pointer;     /* Pointer cursor on hover */
+      margin-top: 20px;     /* Adds space between the image and button */
+    }
+
+    button:hover {
+      background-color: darkpink; /* Fixed color typo */
+    }
+
+    img {
+      width: 100%; /* Adjust the image width to fill the container */
+      max-width: 600px; /* Optional: Limit the image size */
+      height: auto;  /* Keep the aspect ratio of the image */
+      margin-top: 20px; /* Adds space before the button */
+      opacity: 0;  /* Initially hide the image */
+      animation: fadeIn 2s forwards;  /* Apply the fade-in animation */
+    }
+
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0; /* Start with the image hidden */
+      }
+      to {
+        opacity: 1; /* End with the image fully visible */
+      }
+    }
+
+    /* Optional: Center the button and image */
+    .header-container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="first-page">
+  <header class="header-container">
+    <img src="your-image.jpg" alt="Header Image"> <!-- Replace with your image URL -->
+    <button id="continueButton">Continue</button> 
+  </header>
+
+  <main>
+    <!-- Other content can go here -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
