@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>♡xjm♡</title>
+  <title>♡xjm♡ - Surprise Gift</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Button Styles */
@@ -21,7 +21,7 @@
       background-color: darkpink;
     }
 
-    /* Layout for the gift box and image */
+    /* Layout for the gift box */
     .gift-box {
       width: 200px;
       height: 200px;
@@ -35,6 +35,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
+    /* Gift box lid */
     .gift-box .lid {
       width: 100%;
       height: 40px;
@@ -45,6 +46,7 @@
       transition: all 0.5s ease;
     }
 
+    /* Image inside the gift box */
     .gift-box img {
       width: 180px;
       height: 180px;
@@ -54,14 +56,48 @@
       transition: opacity 1s ease, top 1s ease;
     }
 
+    /* Bow styles */
+    .bow {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 40px;
+      background-color: pink;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .bow:before,
+    .bow:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 40px;
+      background-color: pink;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .bow:before {
+      transform: rotate(45deg) translateX(-50%) translateY(-50%);
+    }
+
+    .bow:after {
+      transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+    }
+
     /* Button container styling */
     header {
       text-align: center;
       margin-top: 50px;
     }
 
-    /* Hide the image and lid initially */
-    .gift-box img.show, .gift-box .lid.open {
+    /* Show lid and image when button is clicked */
+    .gift-box img.show,
+    .gift-box .lid.open {
       opacity: 1;
       top: -50px; /* Lid opens */
     }
@@ -78,6 +114,7 @@
   <main>
     <div class="gift-box">
       <div class="lid"></div>
+      <div class="bow"></div> <!-- The bow is added here -->
       <img src="your-image.jpg" alt="Christmas Gift Surprise" id="giftImage">
     </div>
   </main>
