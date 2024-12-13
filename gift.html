@@ -6,6 +6,15 @@
   <title>♡xjm♡</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Center the content of header (both image and button) */
+    .header-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column; /* Arrange image and button in a vertical column */
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center vertically (optional, works with the full page height) */
+    }
+
     button {
       border-radius: 15px; /* Rounds the corners of the button */
       padding: 10px 20px;   /* Adds padding for a better size */
@@ -25,7 +34,6 @@
       width: 100%; /* Adjust the image width to fill the container */
       max-width: 600px; /* Optional: Limit the image size */
       height: auto;  /* Keep the aspect ratio of the image */
-      margin-top: 20px; /* Adds space before the button */
       opacity: 0;  /* Initially hide the image */
       animation: fadeIn 4s forwards;  /* Slower fade-in animation (4s duration) */
     }
@@ -39,17 +47,12 @@
         opacity: 1; /* End with the image fully visible */
       }
     }
-
-    /* Optional: Center the button and image */
-    .header-container {
-      text-align: center;
-    }
   </style>
 </head>
 <body class="first-page">
   <header class="header-container">
     <img src="dbz.jpg" alt="Dragon Ball Z Image"> <!-- Replace with your image -->
-    <button id="continueButton">Continue</button> 
+    <button id="continueButton">continue</button> 
   </header>
 
   <main>
