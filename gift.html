@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♡xjm♡</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Button Styles */
+    button {
+      border-radius: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: pink;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkpink;
+    }
+
+    /* Layout for the gift box and image */
+    .gift-box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      position: relative;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .gift-box .lid {
+      width: 100%;
+      height: 40px;
+      background-color: green;
+      position: absolute;
+      top: 0;
+      border-radius: 10px 10px 0 0;
+      transition: all 0.5s ease;
+    }
+
+    .gift-box img {
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      top: 50px;
+      opacity: 0;
+      transition: opacity 1s ease, top 1s ease;
+    }
+
+    /* Button container styling */
+    header {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* Hide the image and lid initially */
+    .gift-box img.show, .gift-box .lid.open {
+      opacity: 1;
+      top: -50px; /* Lid opens */
+    }
+  </style>
+</head>
+<body class="second-page">
+
+  <header>
+    <p>Are you ready for the surprise?</p>
+    <p>Click the button to open the gift!</p>
+    <button id="backButton">Open Gift</button>
+  </header>
+
+  <main>
+    <div class="gift-box">
+      <div class="lid"></div>
+      <img src="your-image.jpg" alt="Christmas Gift Surprise" id="giftImage">
+    </div>
+  </main>
+
+  <script>
+    // JavaScript to make the lid open and show the image
+    document.getElementById("backButton").addEventListener("click", function() {
+      document.querySelector(".gift-box .lid").classList.add("open");
+      document.getElementById("giftImage").classList.add("show");
+    });
+  </script>
+
+</body>
+</html>
