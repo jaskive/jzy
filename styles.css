@@ -1,0 +1,81 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f1f1;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  background-color: #ff99cc;
+  color: white;
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3385;
+}
+
+footer {
+  padding: 10px;
+  background-color: #ff99cc;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.first-page {
+  background-color: #fff0f6;
+}
+
+.second-page {
+  background-color: #ffe6f1;
+}
+
+#heart-container {
+  position: relative;
+  margin-top: 40px;
+}
+
+#heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 80%, 15% 100%, 0% 35%);
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
