@@ -15,6 +15,23 @@
       justify-content: center; /* Center vertically (optional, works with the full page height) */
     }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♡xjm♡</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Center the content of header (both image and button) */
+    .header-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column; /* Arrange image and button in a vertical column */
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center vertically (optional, works with the full page height) */
+    }
+
     button {
       border-radius: 15px; /* Rounds the corners of the button */
       padding: 10px 20px;   /* Adds padding for a better size */
@@ -59,6 +76,11 @@
     <!-- Other content can go here -->
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    // JavaScript to navigate to code.html when the button is clicked
+    document.getElementById("continueButton").addEventListener("click", function() {
+      window.location.href = "code.html";  // Redirects to code.html
+    });
+  </script>
 </body>
 </html>
